@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Funnel Sans", sans-serif;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#index {
+
+    background-image: url('../images/background-main.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+
+
+}
+#background-trailers {
+    background-image: url('../images/background-trailers.png');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+}
+#background-trailers::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.884); 
+    z-index: -1;
+}
+
+#index::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.884); 
+    z-index: -1;
+}
+
+:root {
+    --cor-01: rgba(169, 0, 221, 0.548);
+    --cor-02: #000;
+    --cor-03: #ccc;
+    --cor-04: #fff
+}
+#cabecalho {
+    background-color: rgba(0, 0, 0, 0);
+}
+#cabecalho .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho #logo {
+    width: 70px;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: var(--cor-04);
+    display: block;
+    padding: 20px 30px;
+    transition: all 0.3s linear;
+    border-radius: 20px;
+
+
+}
+#menu ul {
+    display: flex;
+    list-style: none;
+}
+#menu ul li a:hover {
+    background-color: rgba(255, 97, 97, 0.63);
+
+}
+#menu ul li:hover .submenu {
+    display: block;
+}
+.cara img {
+    width: 700px;
+    animation: flutuar 3s ease-in-out infinite;    
+}
+.cara {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.banguela img {
+    width: 200px;
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    z-index: 1;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+}
+.titulo {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgba(255, 101, 101, 0.897);
+
+}
+
+#historia img {
+    float: left;
+    width: 350px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.botao-menu {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(255, 103, 103);
+    margin-left: 1000px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+a:hover {
+    cursor: pointer;
+    background-color: rgba(255, 103, 103, 0.7);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.descubra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.descubra p {
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.DESCUBRA {
+    color: rgb(252, 119, 119);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#blocos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 120px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bloco1{
+    background-color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    background-image: url('../images/personagens/bloco-personagens.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+
+
+}
+.bloco2 {
+    position: relative;
+    background-color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    background-image: url('../images/personagens/bloco-dragoes.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+
+}
+.bloco3 {
+    position: relative;
+    background-color: black;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 250px;
+    border-radius: 20px;
+    background-image: url('../images/personagens/bloco-live.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+
+}
+.bloco3::after {
+    content: "Live Action";
+    position: absolute;
+    top: 50%; left: 18%;
+    border-radius: 20px; 
+    pointer-events: none;
+    font-weight: bold;
+    color: rgb(253, 117, 117);
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 3;
+    font-size: 30px;
+    
+}
+.bloco3:hover::after {
+    opacity: 1;
+}
+.bloco1::before{
+    content: "Personagens";
+    position: absolute;
+    top: 50%; left: 18%; 
+    border-radius: 20px; 
+    pointer-events: none;
+    color: rgb(255, 128, 128);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 3;
+    font-size: 30px;
+}
+.bloco2::before {
+    content: "Dragões";
+    position: absolute;
+    top: 50%; left: 25%;
+    border-radius: 20px; 
+    pointer-events: none;
+    color: rgb(255, 128, 128);
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-shadow: 2px 2px 8px #000;
+    z-index: 3;
+    font-size: 30px;
+}
+.bloco2:hover::before {
+    opacity: 1;
+}
+.bloco1:hover::before {
+    opacity: 1;
+}
+.bloco2::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px; 
+    pointer-events: none;
+    border: 2px solid rgb(0, 0, 0);
+}
+.bloco1:hover,
+.bloco2:hover,
+.bloco3:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    cursor: pointer;
+}
+.resumo:hover {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+}
+
+
+#historia p {
+    margin-bottom: 15px;
+    text-align: justify;
+
+}
+.sobre-mim-titulo {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(255, 134, 134, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 30px;
+}
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.sobre {
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.897);
+    padding:  10px;
+    width: 1000px;
+    
+}	
+.sobre-container img {
+    display: flex;
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.sobre-mim {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-align: left;
+}
+.sobre:hover {
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.sobre-mim p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+#rodape {
+    background-color: #000;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px 0;
+    font-size: 13px;
+}
+a { 
+    color: antiquewhite;
+}
+a:hover
+{
+    color:var(--cor-01);
+}
+
+#fotos #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+                
+}
+#fotos #galeria img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s linear;
+    
+
+}
+#fotos #galeria img:hover {
+    transform: scale(1.1);
+
+}
+#videos #galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.enciclopedia {
+    background-color: rgba(0, 0, 0, 0.329);
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.5);
+    z-index: 1;
+}
+
+.enciclopedia p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+.destaque-dragoes {
+    color:#ff5050;
+    font-weight: bold;
+}
+.banguela-enciclopedia img {
+    width: 350px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -47%;
+    margin-left: -22%;
+}
+.banguela-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.narder-enciclopedia img {
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -47%;
+    margin-left: 5%;
+}
+.narder-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.ziper-enciclopedia img {
+    width: 350px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -27%;
+    margin-left: 5%;
+}
+.ziper-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.pesadelo-enciclopedia img {
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+    margin-top: -27%;
+    margin-left: -25%;
+}
+.pesadelo-enciclopedia img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.titulo-filmes {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.DRAGAO {
+    color: rgba(255, 101, 101, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.filmes-htyd img {
+    width: 250px;
+    margin: 0 auto;
+}
+.text1 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.897);
+}
+.filmes-htyd p img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    
+
+}
+.posters-filmes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas, ajuste para mais */ /* espaço entre as imagens */
+    justify-items: center;
+    margin: 10px 0;
+}
+
+.posters-filmes img {
+    width: 250px; /* ajuste o tamanho conforme necessário */
+    height: 400px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.posters-filmes img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 16px 4px rgba(248, 104, 104, 0.3);
+    cursor: pointer;
+}
+.posters-filmes p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 90px;
+    
+}
+.titulo-trailers {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+.video-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+
+.container-personagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.titulo-personagens {
+    text-align: center;
+
+}
+.personagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 10px 0;
+    max-width: 300px;
+    gap: 90px;
+    align-items: center;
+}
+.personagens img {
+    width: 250px; 
+    height: 180px;
+    transition: transform 0.3s;
+}
+
+.primeiro-filme img {
+    width: 600px; 
+    height: 400px;
+    margin-left: 550px;
+    border-radius: 20%;
+}
+.titulo-primeiro {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(88, 118, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.sobre-primeiro {
+    text-align: left;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.897);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 50px;
+    width: 1200px;
+}
+.diretores {
+    text-align: center;
+    color: #ff5050;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    padding: 50px;
+
+}
+.diretores-container2 {
+    max-width: 400px;
+    padding: 25px;
+    
+}
+.diretores-container2:hover {
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    background-color: #00000071;
+}
+.texto-diretores {
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.diretores-container img {
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+.nome-diretores {
+    text-align: center;
+    font-size: 20px;
+    color: #ff5050;;
+    font-family: cursive;
+}
+.diretores-container {
+    display: grid;
+    grid-template-columns: repeat(2fr, 2fr);
+    margin-top: 50px;
+}
+.diretores-container3 {
+    width: 400px;
+    padding: 25px;
+}
+.diretores-container3:hover {
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    background-color: #00000071;
+}
+.diretores-container1{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+.titulo-personagens {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.personagens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.personagem img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #333;
+    margin-bottom: 12px;
+}
+
+.nome-personagem {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    color: #ccc;
+}
+.personagens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 100px;
+}
+.personagem:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+.container-wallpapers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.titulo-wallpapers {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 100px;
+    color: rgba(255, 119, 119, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 100px;
+}
+.wallpapers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.wallpaper-thumb {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.wallpaper-thumb:hover {
+    transform: scale(0.9);
+}
+
+.modal-wallpaper {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+#rodape-direitos {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgba(255, 108, 108, 0.863);
+    padding: 15px;
+
+}
+.personagem {
+    background: none;
+    box-shadow: none;
+    width: 150px;
+    height: 220px;
+    perspective: 800px;
+    margin-bottom: 20px;
+}
+
+.flip-card {
+    width: 150px;
+    height: 220px;
+    perspective: 800px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(.4,2.08,.55,.44);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 10px rgba(255, 132, 132, 0.2);
+}
+
+.flip-card-front img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #333;
+    margin-bottom: 12px;
+}
+
+.flip-card-front .nome-personagem {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    color: #ccc;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    padding: 20px;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.658);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricao-personagem {
+    margin: 0;
+    font-size: 1em;
+    color: #fff;
+}
+
+
